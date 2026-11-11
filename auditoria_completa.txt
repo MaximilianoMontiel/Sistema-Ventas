@@ -1,0 +1,104 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261111203207
+Nombre de usuario: DESKTOP-B6PR73D\Mac
+Usuario RunAs: DESKTOP-B6PR73D\Mac
+Nombre de la configuración: 
+Máquina: DESKTOP-B6PR73D (Microsoft Windows NT 10.0.19045.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 13388
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Mac\Desktop\auditoria_completa.txt
+PS C:\Users\Mac> cd $HOME\Desktop
+PS C:\Users\Mac\Desktop> mkdir Sistema_Ventas
+
+
+    Directorio: C:\Users\Mac\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/11/2026     20:32                Sistema_Ventas
+
+
+PS C:\Users\Mac\Desktop> cd Sistema_Ventas
+PS C:\Users\Mac\Desktop\Sistema_Ventas> mkdir Frontend, Backend, BaseDatos
+
+
+    Directorio: C:\Users\Mac\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/11/2026     20:32                Frontend
+d-----        11/11/2026     20:32                Backend
+d-----        11/11/2026     20:32                BaseDatos
+
+
+PS C:\Users\Mac\Desktop\Sistema_Ventas> echo "Version 1.0 del Sistema de Ventas" > README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Version 1.0 del Sistema de Ventas"
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git init
+Initialized empty Git repository in C:/Users/Mac/Desktop/Sistema_Ventas/.git/
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git commit -m "Día 1: Despliegue de la estructura base"
+[Main (root-commit) 407834d] Día 1: Despliegue de la estructura base
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git remote add origin https://github.com/MaximilianoMontiel/Sistema-Ventas.git
+
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git push -u origin main
+fatal: main cannot be resolved to branch
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git push -u origin Main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MaximilianoMontiel/Sistema-Ventas.git
+ * [new branch]      Main -> Main
+branch 'Main' set up to track 'origin/Main'.
+PS C:\Users\Mac\Desktop\Sistema_Ventas> echo "Conectando al servidor SQL..." > BaseDatos\conexion.ps1
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Conectando al servidor SQL..."
+PS C:\Users\Mac\Desktop\Sistema_Ventas> echo "Actualizacion Dia 2: Modulo DB agregado" >> README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Actualizacion Dia 2: Modulo DB agregado"
+PS C:\Users\Mac\Desktop\Sistema_Ventas> mkdir Pruebas_Unitarias
+
+
+    Directorio: C:\Users\Mac\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/11/2026     20:38                Pruebas_Unitarias
+
+
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git commit -m "Dia 2: Agregados scripts de DB y carpeta de pruebas"
+[Main 32f39c7] Dia 2: Agregados scripts de DB y carpeta de pruebas
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 BaseDatos/conexion.ps1
+PS C:\Users\Mac\Desktop\Sistema_Ventas> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 534 bytes | 267.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MaximilianoMontiel/Sistema-Ventas.git
+   407834d..32f39c7  Main -> Main
+PS C:\Users\Mac\Desktop\Sistema_Ventas> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261111203854
+**********************
